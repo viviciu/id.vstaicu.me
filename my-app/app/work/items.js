@@ -20,6 +20,15 @@ export const items = [
     category: "Industrial Design",
     categorySpecific: "",
   },
+  {
+    id: "spatula",
+    name: "Spatula",
+    url: "https://res.cloudinary.com/ddjxpkewq/image/upload/f_auto,q_auto/v1/play/lohb80s9ngarowqrs78s",
+    // url: "/imgs/DSC05668-thumbnail.jpg",
+    fileType: "img",
+    category: "Industrial Design",
+    categorySpecific: "",
+  },
   
   {
     id: "touchdesignerSeries",
