@@ -1,0 +1,46 @@
+Implemented Vercel Speed Insights for HTML project
+
+## What was implemented:
+
+Added Vercel Speed Insights tracking to all HTML pages in the portfolio site.
+
+## Files Modified:
+
+- `/index.html` - Added Speed Insights scripts to the main landing page
+- `/elysium/index.html` - Added Speed Insights scripts to the Elysium project page
+- `/play/index.html` - Added Speed Insights scripts to the Play page
+- `/mile10/index.html` - Added Speed Insights scripts to the Mile 10 project page
+- `/sketches/index.html` - Added Speed Insights scripts to the Sketches page
+- `/c4d/index.html` - Added Speed Insights scripts to the Cinema 4D explorations page
+
+## Implementation details:
+
+Since this is a Vite-based HTML project (not a framework like React or Next.js), I followed the HTML implementation pattern from the Vercel Speed Insights documentation. 
+
+Added the following two script tags before the closing `</body>` tag in all HTML files:
+
+```html
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+```
+
+These scripts:
+1. Initialize the Speed Insights tracking queue on the window object
+2. Load the Speed Insights script from Vercel's CDN at `/_vercel/speed-insights/script.js`
+
+## Testing:
+
+- ✅ Build completed successfully with `npm run build`
+- ✅ Verified Speed Insights scripts are present in all built HTML files
+- ✅ No errors or warnings during build process
+
+## Next steps:
+
+After deploying to Vercel:
+1. The `/_vercel/speed-insights/script.js` route will be automatically available
+2. Speed Insights will start collecting performance metrics from visitors
+3. Data will be viewable in the Vercel dashboard under the "Speed Insights" tab
+
+No package installation was needed for the HTML implementation as the scripts are loaded directly from Vercel's CDN.
